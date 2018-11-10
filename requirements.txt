@@ -1,0 +1,4 @@
+requests
+gunicorn
+flask-restplus
+flask-jwt-extended

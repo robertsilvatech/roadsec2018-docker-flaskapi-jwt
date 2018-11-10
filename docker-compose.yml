@@ -1,0 +1,12 @@
+version: "3"
+
+services: 
+  flaskapi:
+    image: treborbrz/python3-flask-gunicorp
+    container_name: flaskapi
+    ports:
+      - "8990:5000"
+    volumes:
+      - "/Users/robertsilva/Documents/MyWorkspace/Repo/github.org/py013/roadsec2018/app:/app"
+    command: gunicorn roadsecapi:app --workers 4 --bind 0.0.0.0:5000 --reload
+    
